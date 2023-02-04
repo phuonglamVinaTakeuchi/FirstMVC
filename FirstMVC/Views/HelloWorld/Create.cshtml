@@ -1,0 +1,37 @@
+﻿@model DogViewModel
+@{
+	ViewData["Title"] = "Create New Dog";
+}
+<h1>@ViewData["Title"]</h1>
+<p>Please input and press create button to create a new dog</p>
+<hr/>
+
+<div class="row">
+	<div class="col-6">
+		<div class="card">
+			<div class="card-header">
+				<h5>Create a new dog</h5>
+			</div>
+
+			<div class="card-body">
+				<form asp-controller="HelloWorld" asp-action="Create" method="post">
+					<div class="mb-3">
+						<label class="form-label">Dog Name</label>
+						<input type="text" class="form-control" asp-for="Name" />
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Dog Age</label>
+						<input type="number" class="form-control" asp-for="Age" />
+					</div>
+					<div class="mb-3">
+						<button class="btn btn-outline-primary" type="submit">Save</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="card-footer">
+			</div>
+		</div>
+
+	</div>
+</div>

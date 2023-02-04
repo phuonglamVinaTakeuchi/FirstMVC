@@ -1,0 +1,10 @@
+﻿@model List<DogViewModel>
+@{
+	ViewData["Title"] = "Hello World";
+}
+<ul>
+	@foreach (var dog in Model)
+	{
+		<li>@dog.Name (@dog.Age)</li>
+	}
+</ul>
